@@ -66,7 +66,7 @@ function BimCalculator() {
               onChange={(e) => setWeight(e.target.value)}
             />
           </div>
-          <div>
+          <div className="button">
             <button type="submit">Submit</button>
             <button type="submit" onClick={reload}>
               Reload
@@ -74,10 +74,8 @@ function BimCalculator() {
           </div>
         </form>
 
-        <div>
+        <div className="title">
           <h3>Your BMI is: {bmi} </h3>
-          {/* <h3>Your Height is: {height} </h3>
-          <h3>Your Weight is: {weight} </h3> */}
           <p>{message}</p>
         </div>
       </div>
