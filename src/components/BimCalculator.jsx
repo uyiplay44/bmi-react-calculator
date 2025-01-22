@@ -7,7 +7,7 @@ function BimCalculator() {
   const [weight, setWeight] = useState(0);
   const [message, setMessage] = useState("");
   const [bmi, setBmi] = useState(() => {
-    return localStorage.getItem("bmi");
+    return localStorage.getItem("bmi").innerHtml;
   });
 
   useEffect(() => {
@@ -26,8 +26,8 @@ function BimCalculator() {
     if (height === 0 || weight === 0) {
       alert("Please Enter Correct Details Below");
     } else {
-      let bmi = (weight / (height * height)) * 705;
-      setBmi(bmi.toFixed(1));
+      let bmi = (weight / (height * height)) * 850;
+      setBmi(bmi.toFixed(0));
     }
 
     if (bmi < 25) {
@@ -41,7 +41,8 @@ function BimCalculator() {
     localStorage.setItem("bmi", bmi);
   };
 
-  let reload = () => {
+  let reload = (e) => {
+    e.preventDefault();
     window.location.reload();
   };
 

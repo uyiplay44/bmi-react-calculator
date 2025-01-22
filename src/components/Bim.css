@@ -30,6 +30,7 @@
   border: 1px solid #ccc;
   border-radius: 3px;
   width: 350px;
+  outline: none;
 }
 .button button {
   padding: 14px;
@@ -48,4 +49,8 @@
 .title h3 {
   margin-top: 15px;
   font-size: 40px;
+}
+.title p {
+  font-size: 25px;
+  font-weight: bold;
 }
